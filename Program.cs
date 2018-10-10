@@ -7,12 +7,16 @@ namespace lab1
         static double a, b, c;
         static void Main(string[] args)
         {
-            a = 1;
-            b = -5;
-            c = 6;
-            Console.WriteLine("Hello World!");
-            double[] x = Calculate();
-            Console.WriteLine("x1 = {0}, x2 = {1}", x[0], x[1]);
+            Console.WriteLine("Enter quadratic equation coefficients:");
+            if (
+                double.TryParse(Console.ReadLine(), out a) &&
+                double.TryParse(Console.ReadLine(), out b) &&
+                double.TryParse(Console.ReadLine(), out c) 
+            ) {
+                Console.WriteLine("x = [{0}]", string.Join(", ", Calculate()));
+            } else {
+                Console.WriteLine("Input parse failed.");
+            }
         }
 
         static double[] Calculate() {
