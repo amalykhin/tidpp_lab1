@@ -19,7 +19,11 @@ namespace lab1
             }
         }
 
+<<<<<<< HEAD
         static double[] Calculate(double a1, double a2, double a3) {
+=======
+        static double[] Calculate(double a, double b, double c) {
+>>>>>>> param
             double discrRoot = Math.Sqrt(b*b - 4*a*c);
             return new double[] {(-b-discrRoot)/(2*a), (-b+discrRoot)/(2*a)};
         }
