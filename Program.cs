@@ -13,13 +13,13 @@ namespace lab1
                 double.TryParse(Console.ReadLine(), out b) &&
                 double.TryParse(Console.ReadLine(), out c) 
             ) {
-                Console.WriteLine("x = [{0}]", string.Join(", ", Calculate()));
+                Console.WriteLine("x = [{0}]", string.Join(", ", Calculate(a, b, c)));
             } else {
                 Console.WriteLine("Input parse failed.");
             }
         }
 
-        static double[] Calculate() {
+        static double[] Calculate(double a, double b, double c) {
             double discrRoot = Math.Sqrt(b*b - 4*a*c);
             return new double[] {(-b-discrRoot)/(2*a), (-b+discrRoot)/(2*a)};
         }
