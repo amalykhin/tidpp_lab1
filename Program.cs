@@ -6,26 +6,26 @@ namespace lab1
     {
         static void Main(string[] args)
         {
-            double a, b, c;
-            Console.WriteLine("Enter quadratic equation coefficients:");
+            double x, y, z;
+            Console.WriteLine(" Введите коэффициенты квадратного уравнения:");
             if (
-                double.TryParse(Console.ReadLine(), out a) &&
-                double.TryParse(Console.ReadLine(), out b) &&
-                double.TryParse(Console.ReadLine(), out c) 
+                double.TryParse(Console.ReadLine(), out x) &&
+                double.TryParse(Console.ReadLine(), out y) &&
+                double.TryParse(Console.ReadLine(), out z) 
             ) {
-                Console.WriteLine("x = [{0}]", string.Join(", ", Calculate(a, b, c)));
+                Console.WriteLine("D = [{0}]", string.Join(", ", Calculate(x, y, z)));
             } else {
-                Console.WriteLine("Input parse failed.");
+                Console.WriteLine("Ошибка ввода данных!");
             }
         }
 
 <<<<<<< HEAD
-        static double[] Calculate(double a1, double a2, double a3) {
+        static double[] Calculate(double x1, double x2, double x3) {
 =======
-        static double[] Calculate(double a, double b, double c) {
+        static double[] Calculate(double x, double y, double z) {
 >>>>>>> param
-            double discrRoot = Math.Sqrt(b*b - 4*a*c);
-            return new double[] {(-b-discrRoot)/(2*a), (-b+discrRoot)/(2*a)};
+            double discrRoot = Math.Sqrt(y*y - 4*x*z);
+            return new double[] {(-y-discrRoot)/(2*x), (-y+discrRoot)/(2*x)};
         }
     
     }
